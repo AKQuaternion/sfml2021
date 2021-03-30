@@ -14,13 +14,14 @@ int main()
    if (!font.loadFromFile("../sansation.ttf"))
       return EXIT_FAILURE;
    sf::Text text("Hello SFML", font, 50);
+   text.setFillColor(sf::Color::Red);
    // Load a music to play
    sf::Music music;
    if (!music.openFromFile("../nice_music.ogg"))
       return EXIT_FAILURE;
    // Play the music
    music.play();
-   // Start the game loop
+   // Start the event loop
    while (window.isOpen())
    {
       // Process events
